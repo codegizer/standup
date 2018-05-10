@@ -4,7 +4,7 @@ import './App.css';
 import Editor from './Editor'
 import FirebaseDao from './FirebaseDao'
 import config from './config'
-
+console.log(config);
 /*
 * App Component
 */
@@ -60,7 +60,7 @@ class App extends Component {
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
         </div>
-        <Editor handleSubmit={this.submit} isAnonymous={this.isAnonymous}/>
+        <Editor submit={this.submit} isAnonymous={this.isAnonymous}/>
         <ul>
         {this.getArticles()}
         </ul>
