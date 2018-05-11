@@ -4,7 +4,7 @@ import './App.css';
 import Editor from './Editor'
 import FirebaseDao from './FirebaseDao'
 import config from './config'
-console.log(config);
+/*console.log(config);*/
 /*
 * App Component
 */
