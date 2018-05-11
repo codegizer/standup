@@ -13,8 +13,7 @@ export default class FirebaseDao {
   update(key,postData){
     var updates = {};
     updates['/posts/' + key] = postData;
-    updates['/user-posts/genji/' + key] = postData;
-    console.log(updates);
+    updates['/user-posts/genji/' + key] = postData;    
     return firebase.database().ref().update(JSON.parse( JSON.stringify(updates ) ));
   }
   remove(key){
