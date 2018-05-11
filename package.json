@@ -2,7 +2,7 @@
   "name": "standup",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ehrudxo.github.io/standup",
+  "homepage": "https://codegizer.github.io/standup",
   "devDependencies": {
     "react-scripts": "0.7.0"
   },
