@@ -22,7 +22,8 @@ export default class FirebaseDao {
     var updates = {};
     updates['/posts/' + key] = postData;
     updates['/user-posts/genji/' + key] = postData;
-    return firebase.database().ref().update(updates);
+    //ERROR:: return firebase.database().ref().update(updates);
+    return firebase.database().ref().update(JSON.parse( JSON.stringify(updates ) ));
   }
   remove(key){
     return new Promise(resolve=>{

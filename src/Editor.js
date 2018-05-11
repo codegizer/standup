@@ -118,8 +118,7 @@ class Editor extends Component {
             contentEditable="true"
             placeholder="글쓰기..."
             onPaste={this.onPaste}
-            onKeyUp={this.editorChange}
-            dangerouslySetInnerHTML={{__html: this.state.content}}></div>
+            onKeyUp={this.editorChange}></div>
             <Card cardInfo={this.state.cardInfo}/>
         </div>
         <div className="actionBar">
