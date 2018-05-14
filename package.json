@@ -2,10 +2,10 @@
   "name": "standup",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ehrudxo.github.io/standup",
+  "homepage": "https://codegizer.github.io/standup",
   "devDependencies": {
     "eslint-plugin-react": "^6.10.0",
-    "react-scripts": "0.7.0"
+    "react-scripts": "1.1.4"
   },
   "dependencies": {
     "axios": "^0.15.2",
@@ -19,7 +19,7 @@
     "react-redux": "^4.4.6",
     "react-router": "^3.0.0",
     "react-router-redux": "^4.0.7",
-    "react-slick": "^0.14.5",
+    "react-slick": "^0.23.1",
     "redux": "^3.6.0",
     "redux-devtools": "^3.3.1",
     "redux-devtools-dock-monitor": "^1.1.1",
