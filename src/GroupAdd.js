@@ -85,7 +85,8 @@ class GroupAdd extends Component{
   }
   render(){
     let add_group_style={
-      width : window.screen.width -10
+      //width : window.screen.width -10
+      width : document.body.offsetWidth -10      
     }
 
     return(
@@ -96,6 +97,7 @@ class GroupAdd extends Component{
              contentEditable="true"
              placeholder="그룹명을 입력하세요"
              onKeyUp={(e)=>this.groupNameChanged(e)}
+             dangerouslySetInnerHTML={{__html: this.state.groupName}}
              ></div>
           <button onClick={()=>this.checkGroups()} className="check-exists button-reverse">
             {this.state.groupNameUnique &&

@@ -17,7 +17,8 @@ class GroupCard extends Component{
     return(
      <div className="style_bg">
        <img src={this.props.imageUrl} className="style_img"  alt={this.props.title}/>
-       <div className="style_title" style={{width:window.screen.width}}>
+       
+       <div className="style_title" style={{width:document.body.offsetWidth}}>
          &nbsp;{this.props.title}
          <button className="style_chk" onClick={()=>this.changeGroup(this.props.title)}>
            <i className="fa fa-check">선택</i>
