@@ -10,6 +10,7 @@ import CardList from './CardList'
 class App extends Component {
   render() {
     let groupName = this.props.params.groupName;
+    console.log(groupName);
     let logo = standardLogo;
     let headerClass = "app-header";
     let headerStyle ={

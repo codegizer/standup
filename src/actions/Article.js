@@ -1,18 +1,20 @@
-import { ARTICLE,ALL } from '../constants'
+import { ARTICLE,ALL,USER } from '../constants'
 import FirebaseDao from '../FirebaseDao'
 import config from '../config'
 import {groupSelect} from './Group'
 const dao = new FirebaseDao(config);
 
 export function userArticles() {
+  console.log("userArticles");
   return {
-    type: ARTICLE
+    type: USER
   }
 }
 /*
 * 여기부터
 */
-export function getArticles(articles){
+export function getArticles(articles){  
+  console.log()
   var items = [];
   articles.forEach(function(article){
     var item = article.val();
