@@ -122,13 +122,27 @@ export default class FirebaseDao {
       })
     });
   }
-  remove(key){
-    return new Promise(resolve=>{
-      firebase.database().ref('/group-posts/').child(key).remove();
-      firebase.database().ref('/user-posts/' + this.currentUser().email ).child(key).remove();
-      resolve(key);
+  remove(item){
+    return new Promise((resolve,reject)=>{
+      let groupKey,uid,key;
+
+      this.checkGroupExists(item.groupName).then((group)=>{        
+        //get group key first
+        groupKey = group?group.key:undefined;
+        //get user mail seconds
+        uid = this.currentUser.uid;
+        //get article key
+        key = item.key;
+        //then remove
+        firebase.database().ref('/group-posts/' + groupKey).child(key).remove();
+        firebase.database().ref('/user-posts/' + uid).child(key).remove();
+        resolve(key);
+      }).catch((error)=>{
+        reject(error);
+      })
     });
   }
+
   off(){
     return firebase.database().ref().off();
   }

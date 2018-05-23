@@ -3,12 +3,18 @@ ul{
   padding:10px;
 }
 .list_row{
+  position: relative;
   margin-top: 3px;
   padding-top:  10px;
   padding-bottom: 5px;
   text-align: left;
   background-color: white;
   border:1px solid #dddfe2;
+}
+.remove{
+  position:absolute;
+  right:0px;
+  bottom:0px;
 }
 .common_margin{
   margin: 15px;

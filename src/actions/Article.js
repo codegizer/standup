@@ -40,3 +40,12 @@ export function updateArticle(postData){
 
   };
 }
+
+export function removeArticle(article){
+  return (dispatch) => {
+    dao.remove(article).then((key)=>{
+      dispatch(groupSelect(article.groupName));
+    });
+
+  };
+}
